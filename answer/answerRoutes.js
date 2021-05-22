@@ -198,7 +198,7 @@ const answerControllers = require('./answerControllers')
  *         description: The answer data
  */
 
-router.post("/", answerControllers.createAnswer)
+router.post("/", authenticateToken, answerControllers.createAnswer)
 router.patch("/:id", authenticateToken, answerControllers.updateAnswer)
 router.delete("/:id", authenticateToken, answerControllers.deleteAnswer)
 
