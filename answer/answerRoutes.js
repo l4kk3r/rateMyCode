@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router()
 
+const authenticateToken = require('../user/userMiddlewares').authenticateToken
+
 const answerControllers = require('./answerControllers')
 
 /**
@@ -197,7 +199,7 @@ const answerControllers = require('./answerControllers')
  */
 
 router.post("/", answerControllers.createAnswer)
-router.patch("/:id", answerControllers.updateAnswer)
-router.delete("/:id", answerControllers.deleteAnswer)
+router.patch("/:id", authenticateToken, answerControllers.updateAnswer)
+router.delete("/:id", authenticateToken, answerControllers.deleteAnswer)
 
 module.exports = router
