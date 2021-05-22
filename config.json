@@ -1,0 +1,4 @@
+{
+    "MONGODB_URI": "mongodb+srv://admin:G7TTM5OI5Sq2r3AP@cluster0.fct0r.mongodb.net/rateMyCodeDb?retryWrites=true&w=majority",
+    "JWT_SECRET": "45d2e75236dc25d92ee1482f7108e7c25784dbf2d9cd111eb31d17b0a3c5"
+}

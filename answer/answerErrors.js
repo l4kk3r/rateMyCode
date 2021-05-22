@@ -1,0 +1,1 @@
+exports.joiError = (err) => err.message
